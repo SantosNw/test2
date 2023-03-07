@@ -1,0 +1,198 @@
+@import url('https://fonts.googleapis.com/css2?family=Teko:wght@300&display=swap');
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Teko', sans-serif;
+}
+
+body{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    background: #009933;
+
+}
+
+
+.cover {
+    background-image: url("logoheader.svg");
+    background-repeat: no-repeat;
+    background-position: top;
+    position: absolute;
+    top: 50px;
+    height: 150px;
+    width: 800px;
+}
+
+.container{
+    position: relative;
+    width: 800px;
+    height: 800px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+/*.container .spinBtn{
+    position: absolute;
+    width: 80px;
+    height: 80px;
+    background-image: url("logo.svg");
+    background-repeat: no-repeat;
+    background-position: center;
+    border-radius: 50%;
+    z-index: 10;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-transform: uppercase;
+    font-weight: 600;
+    color: #333;
+    letter-spacing: 0.1em;
+    cursor: pointer;
+    user-select: none;
+}*/
+
+.container .spinBtn2{
+    position: absolute;
+    top: -40px;
+    background-color: white;
+    width: 70px;
+    height: 70px;
+    border-radius: 50%;
+    z-index: 10;
+    display: flex;
+    text-transform: uppercase;
+    font-weight: 600;
+    color: #333;
+    letter-spacing: 0.1em;
+    border: 5px solid rgba(38,38,38,1);
+    cursor: pointer;
+    user-select: none;
+    transition: transform 0.2s;
+}
+
+
+.container .spinBtn{
+    position: absolute;
+    background-color: #D0BA7C;
+    width: 70px;
+    height: 70px;
+    border-radius: 50%;
+    z-index: 10;
+    display: flex;
+    text-transform: uppercase;
+    font-weight: 600;
+    color: #333;
+    letter-spacing: 0.1em;
+    border: 5px solid rgba(38,38,38,1);
+    cursor: pointer;
+    user-select: none;
+    transition: transform 0.2s;
+}
+
+
+
+.container .spinBtn:hover {
+    transform: scale(1.5);
+}
+
+.container .spinBtn2 .circle {
+    position: block;
+    width: 90px;
+    height: 90px;
+    background-image: url("logo.svg");
+    background-repeat: no-repeat;
+    background-position: top;
+    border-radius: 50%;
+    z-index: 10;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-transform: uppercase;
+    font-weight: 600;
+    color: #333;
+    letter-spacing: 0.1em;
+    cursor: pointer;
+    user-select: none;
+    transition: transform 0.2s;
+}
+
+.container .spinBtn .circle {
+    position: block;
+    width: 70px;
+    height: 65px;
+    border-radius: 50%;
+    z-index: 10;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-transform: uppercase;
+    font-weight: 800;
+    color: #333;
+    letter-spacing: 0.1em;
+    cursor: pointer;
+    user-select: none;
+    transition: transform 0.2s;
+}
+
+.container .spinBtn .circle:hover {
+    transform: scale(1);
+}
+
+.container .wheel{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: #333;
+    border-radius: 50%;
+    overflow: hidden;
+    box-shadow: 0 0 0 5px #262626, 0 0 0 15px #D0BA7C, 0 0 0 20px #262626;
+    transition: transform 5s ease-in-out;
+}
+
+.container .wheel .number{
+    position: absolute;
+    width: 50%;
+    height: 50%;
+    background: var(--clr);
+    transform-origin: bottom right;
+    transform: rotate(calc(45deg * var(--i)));
+    clip-path: polygon(0 0, 60% 0, 100% 100%, 0 60%);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    user-select: none;
+    cursor: pointer;
+}
+
+.container .wheel .number span{
+    position: relative;
+    transform: rotate(45deg);
+    font-size: 50px;
+    font-weight: 700;
+    color: #fff;
+    text-shadow: 3px 5px 2px rgba(0,0,0,0.15);
+    
+}
+
+.container .wheel .number span .banana{
+    font-family: 'Teko', sans-serif;
+    font-weight: 300;
+    font-size: 20px;
+    position: absolute;
+    transform: rotate(-90deg);
+    margin-top: 12%;
+
+}
+
+.container .wheel .number span::after{
+    content: '';
+    position: absolute;
+    font-size: 0.75em;
+    font-weight: 500;
+}
